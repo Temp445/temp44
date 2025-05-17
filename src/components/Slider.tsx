@@ -19,7 +19,7 @@ const Slider = () => {
 
     let extra = 0
 
-    for (let bracket of brackets) {
+    for (const bracket of brackets) {  // changed 'let' to 'const' here
       if (toolRange > bracket.min) {
         const cappedMax = Math.min(toolRange, bracket.max)
         const steps = Math.floor((cappedMax - bracket.min) / 25) + 1
